@@ -27,11 +27,11 @@
 .about-us-image {
   display: block;
 
-  width: 335px;
-  height: 209px;
+  width: 100%;
+  max-width: 335px;
+  height: auto;
 
   border-radius: 1000px;
-
   object-fit: cover;
 }
 
