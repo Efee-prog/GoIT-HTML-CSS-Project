@@ -3,13 +3,16 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
+/* HEADER */
+
 .our-courses-header {
   margin-bottom: 40px;
 }
+
 .our-courses-title {
   margin-bottom: 20px;
 
-  font-family: 'DM Sans', sans-serif;
   font-weight: 500;
   font-size: 28px;
   line-height: 32px;
@@ -23,6 +26,8 @@
 }
 
 .our-courses-header-text {
+  max-width: 335px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
@@ -30,39 +35,119 @@
 
   color: #fff;
 }
+
+/* LIST */
+
 .our-courses-list {
   display: flex;
   flex-direction: column;
   gap: 20px;
 
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
+
+/* CARD */
 
 .our-courses-item {
   width: 335px;
   height: 398px;
+
+  display: flex;
+  flex-direction: column;
+
   padding: 28px;
 
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 12px;
-  background: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
 
-  box-sizing: border-box;
+  background: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
 }
+
+/* TOP */
+
 .our-courses-item-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+
+  margin-bottom: 28px;
 }
+
+.our-courses-number {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* LINK */
 
 .our-courses-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  color: #777777;
+  background-color: #1d1d1d;
+
+  transition: background-color 250ms ease;
 }
+
+/* ICON */
 
 .our-courses-icon {
   width: 32px;
   height: 32px;
+
+  stroke: #777;
+
+  transition: stroke 250ms ease;
+}
+
+.our-courses-link:hover,
+.our-courses-link:focus {
+  background-color: #bea69e;
+  color: #fff;
+}
+
+.our-courses-link:hover .our-courses-icon,
+.our-courses-link:focus .our-courses-icon {
+  stroke: #121212;
+}
+
+/* TITLE */
+
+.our-courses-item-title {
+  width: 279px;
+
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+
+  color: #fff;
+}
+
+/* TEXT */
+
+.our-courses-item-text {
+  width: 279px;
+
+  margin-top: auto;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+
+  color: rgba(255, 255, 255, 0.5);
 }
