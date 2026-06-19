@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+
+    <symbol id="icon-arrow" viewBox="0 0 32 32">
+        <circle cx="16" cy="16" r="16" fill="#1d1d1d" />
+
+        <path
+            stroke="#777"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.3"
+            d="m11 21 10-10M14.333 11H21v6.667"
+        />
+    </symbol>
+
+</svg>
