@@ -1,5 +1,7 @@
 .about-us {
   background-color: #121212;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .about-us-title {
@@ -14,8 +16,8 @@
   color: #fff;
 }
 
-.about-us-span{
-    color: #BEA69E;
+.about-us-span {
+  color: #bea69e;
 }
 
 .about-us-block {
@@ -50,3 +52,48 @@
   color: #fff;
 }
 
+/* TABLET */
+
+@media only screen and (min-width: 768px) {
+  .about-us-title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 1.12;
+  }
+  .about-us-block {
+    gap: 50px;
+  }
+  .about-us-image {
+    max-width: 704px;
+    height: 340px;
+  }
+  .about-us-text-wrapper {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .about-us-text {
+    width: 280px;
+  }
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 1280px) {
+  .about-us-block {
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+  }
+  .about-us-text-wrapper {
+    flex-direction: row;
+    gap: 20px;
+    width: 552px;
+  }
+  .about-us-image {
+    width: 488px;
+    height: 260px;
+  }
+  .about-us-text {
+    flex-basis: calc((100% - 20px) / 2);
+  }
+}
