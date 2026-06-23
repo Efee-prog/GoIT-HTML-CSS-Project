@@ -1,0 +1,178 @@
+.reviews {
+  padding: 40px 0;
+}
+
+.reviews-title {
+  margin-bottom: 40px;
+  font-family: var(--main-font);
+  /* Figma mobile: 28px/32px ls=-1.12 → -0.04em */
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--primary-text-color);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.reviews-item {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: transparent;
+}
+
+/* On mobile only the first card is visible */
+.reviews-item:nth-child(2) {
+  display: none;
+}
+
+.reviews-card-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.reviews-person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.reviews-person-img {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.reviews-person-name {
+  margin-bottom: 4px;
+  font-family: var(--main-font);
+  /* Figma: 20px/24px weight 500 */
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--primary-text-color);
+}
+
+.reviews-role {
+  margin: 0;
+  font-family: var(--main-font);
+  /* Figma: 12px/16px ls=-0.24 */
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  color: var(--text-muted);
+}
+
+/* Figma star: 16px white circle, brown vector fill inside */
+.reviews-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-left: 68px;
+}
+
+.reviews-star-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.reviews-text {
+  margin: 0;
+  font-family: var(--main-font);
+  /* Figma mobile: 14px/18px ls=-0.28 */
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: var(--primary-text-color);
+}
+
+@media screen and (min-width: 768px) {
+  .reviews {
+    padding: 50px 0;
+  }
+
+  .reviews-title {
+    margin-bottom: 50px;
+    /* Figma tablet: 48px/54px ls=-1.92 → -0.04em */
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -0.04em;
+  }
+
+  .reviews-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .reviews-item {
+    flex: 1 1 calc((100% - 20px) / 2);
+    max-width: 640px;
+  }
+
+  .reviews-item:nth-child(2) {
+    display: list-item;
+  }
+
+  .reviews-card-top {
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .reviews-person {
+    margin-bottom: 0;
+  }
+
+  .reviews-stars {
+    margin-left: 0;
+  }
+
+  .reviews-text {
+    /* Figma tablet: 16px/20px ls=-0.32 → -0.02em */
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .reviews {
+    padding: 75px 0;
+  }
+
+  .reviews-title {
+    /* Figma desktop: 48px/54px ls=-1.92 → -0.04em */
+    font-size: 48px;
+    line-height: 54px;
+    letter-spacing: -0.04em;
+  }
+
+  .reviews-item {
+    flex: 1 1 calc((100% - 20px) / 2);
+  }
+
+  .reviews-text {
+    /* Figma desktop: 16px/20px ls=-0.32 → -0.02em */
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+  }
+}

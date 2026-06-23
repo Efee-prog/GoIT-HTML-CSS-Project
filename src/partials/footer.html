@@ -1,12 +1,17 @@
-<link rel="stylesheet" href="../css/footer.css" />
-
-<footer class="footer">
+<footer class="footer" id="contacts">
   <div class="container">
     <div class="block footer-logo">
-      <h2>Focus.Frame</h2>
+      <a class="footer-logo-link" href="./index.html" aria-label="FocusFrame home">
+        <img
+          src="/images/logo.svg"
+          alt="FocusFrame logo"
+          width="123"
+          height="16"
+        />
+      </a>
       <ul class="contacts-list">
         <li><a href="tel:+380665438912">+38 066 543 8912</a></li>
-        <li><p>1678 S. Pioneer Road Salt Lake City UT 84104</p></li>
+        <li><address class="footer-address">1678 S. Pioneer Road Salt Lake City UT 84104</address></li>
       </ul>
     </div>
 
@@ -40,11 +45,11 @@
         </ul>
       </div>
 
-      <nav class="block">
+      <nav class="block" aria-label="Footer navigation">
         <ul class="contacts-list">
-          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#our-courses">Our Courses</a></li>
-          <li><a href="#our-mentors">Our Mentors</a></li>
+          <li><a href="#mentors">Our Mentors</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#contacts">Contacts</a></li>
         </ul>
@@ -53,26 +58,25 @@
 
     <div class="block">
       <form class="footer-form" autocomplete="off">
-        <label for="footer-email" class="visually-hidden"
-          >Enter your email</label
-        >
+        <label for="footer-email" class="visually-hidden">Enter your email</label>
         <input
           type="email"
           id="footer-email"
-          class="input"
+          class="footer-input"
           placeholder="Enter your email"
           required
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
         />
-        <button type="submit" class="submit-btn">Go</button>
+        <button type="submit" class="footer-submit-btn">Go</button>
       </form>
     </div>
 
     <div class="footer-bottom">
-      <a href="#privacy-policy" class="text"
-        >Privacy Policy Public Offering Agreement</a
-      >
-      <p class="text">2024 Focus Frame &copy; All rights reserved</p>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-text">Privacy Policy</a>
+        <a href="#" class="footer-text">Public Offering Agreement</a>
+      </div>
+      <p class="footer-text">2024 Focus Frame &copy; All rights reserved</p>
     </div>
   </div>
 </footer>
