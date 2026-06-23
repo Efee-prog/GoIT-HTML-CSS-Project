@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  clear: both;
   background-color: var(--black);
   padding: 40px 20px;
 }
@@ -57,6 +59,8 @@
 
 .socials-list a,
 .contacts-list a {
+  text-decoration: none;
+  color: inherit;
   transition: color 250ms ease;
 }
 
@@ -90,7 +94,7 @@
   border: none;
   outline: none;
   padding: 0 15px;
-  border-radius: 20px;
+  border-radius: 12px;
   font-family: var(--main-font);
   font-size: 14px;
 }
@@ -101,14 +105,16 @@
 
 .footer-submit-btn {
   flex-shrink: 0;
+  width: 60px;
   height: 60px;
-  padding: 0 25px;
+  padding: 0;
   background-color: var(--black-soft);
   color: var(--white);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 12px;
   font-family: var(--main-font);
-  font-size: 16px;
+  font-size: 20px;
+  line-height: 24px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -180,13 +186,13 @@
   }
 
   .footer .container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 40px;
   }
 
   .footer .block:has(.footer-form) {
-    max-width: 380px;
+    max-width: 284px;
   }
 
   .footer-bottom {
