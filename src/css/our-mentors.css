@@ -19,20 +19,39 @@
 }
 
 .our-mentors-list {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: row;
   gap: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
-  justify-items: center;
+}
+
+/* Custom scrollbar matching Figma's dark theme */
+.our-mentors-list::-webkit-scrollbar {
+  height: 6px;
+}
+.our-mentors-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.our-mentors-list::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
 }
 
 .our-mentors-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 0 0 auto;
   width: 185px;
+  scroll-snap-align: center;
   min-height: 240px;
   text-align: center;
 }
@@ -76,9 +95,16 @@
   }
 
   .our-mentors-list {
+    display: grid;
     grid-template-columns: repeat(2, 185px);
     gap: 40px 100px;
     justify-content: center;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  
+  .our-mentors-list::-webkit-scrollbar {
+    display: none;
   }
 
   .our-mentors-name {

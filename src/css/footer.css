@@ -44,6 +44,9 @@
 .footer .container {
   position: relative;
   z-index: 1;
+}
+
+.footer-top {
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -54,6 +57,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 287px;
 }
 
 .footer-logo-link {
@@ -137,6 +141,7 @@
   display: flex;
   flex-direction: column;
   gap: 0;
+  width: 100%;
 }
 
 .footer-form {
@@ -230,17 +235,17 @@ a.footer-text:focus {
     padding: 60px 0 40px;
   }
 
-  .footer .container {
+  .footer-top {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 40px;
+    gap: 0;
   }
 
   .footer-logo {
     flex-shrink: 0;
-    width: auto;
+    width: 152px;
   }
 
   .footer-links-wrapper {
@@ -276,9 +281,9 @@ a.footer-text:focus {
     padding: 50px 0 61px;
   }
 
-  .footer .container {
+  .footer-top {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0;
@@ -287,8 +292,8 @@ a.footer-text:focus {
   /* Logo group: left, rel_x=0 */
   .footer-logo {
     flex-shrink: 0;
+    width: 287px;
     gap: 25px;
-    /* contacts below logo with gap=25px (91-50-16=25) */
   }
 
   /* Navigation block: center, rel_x=427, HORIZONTAL gap=50 between sub-cols */

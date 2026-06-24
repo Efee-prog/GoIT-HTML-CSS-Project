@@ -7,7 +7,7 @@
    ============================================================ */
 
 .reviews {
-  padding: 50px 0;
+  padding: 80px 0 50px;
 }
 
 .reviews-title {
@@ -21,16 +21,38 @@
 
 .reviews-list {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 20px;
-  padding: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 16px;
   margin: 0;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
 }
 
-/* Mobile: only show first card */
+/* Custom scrollbar matching Figma's dark theme */
+.reviews-list::-webkit-scrollbar {
+  height: 6px;
+}
+.reviews-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+.reviews-list::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
 .reviews-item {
-  display: none;
+  display: flex;
+  flex: 0 0 100%;
+  max-width: 335px;
+  scroll-snap-align: center;
+  min-height: 244px;
+  margin: 0 auto;
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -40,7 +62,7 @@
 }
 
 .reviews-item:first-child {
-  display: flex;
+  /* Legacy rule removed */
 }
 
 .reviews-card-top {
@@ -96,6 +118,12 @@
   color: var(--accent-color);
 }
 
+.reviews-star-icon--dimmed {
+  opacity: 0.2 !important;
+  fill-opacity: 0.2 !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+}
+
 .reviews-text {
   margin: 0;
   font-size: 14px;
@@ -107,7 +135,7 @@
 /* ====== TABLET (768px) ====== */
 @media screen and (min-width: 768px) {
   .reviews {
-    padding: 50px 0;
+    padding: 100px 0 50px;
   }
 
   .reviews-title {
@@ -118,14 +146,22 @@
   }
 
   .reviews-list {
-    flex-direction: row;
-    align-items: stretch;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+  
+  .reviews-list::-webkit-scrollbar {
+    display: none;
   }
 
   .reviews-item {
-    display: flex;
-    flex: 1 1 calc((100% - 20px) / 2);
-    max-width: calc((100% - 20px) / 2);
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    min-height: 196px;
+    padding: 32px;
   }
 
   .reviews-card-top {
@@ -147,7 +183,7 @@
    Reviews y=3011, bottom=3331. Footer y=3481. Gap=150px between sections. */
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding: 50px 0 54px;
+    padding: 150px 0 54px;
   }
 
   .reviews-title {
@@ -163,8 +199,11 @@
   }
 
   .reviews-item {
+    display: flex;
     flex: 1 1 calc((100% - 20px) / 2);
     max-width: calc((100% - 20px) / 2);
+    min-height: 216px;
+    padding: 32px;
   }
 
   .reviews-text {
