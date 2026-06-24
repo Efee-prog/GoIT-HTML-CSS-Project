@@ -15,25 +15,22 @@
         <div class="students-left">
           <div class="avatars">
             <img
-              src="./img/girl-1.png"
+              src="./images/girl-1.png"
               alt="Portrait of a female student"
               width="44"
               height="44"
-              loading="lazy"
             />
             <img
-              src="./img/boy.png"
+              src="./images/boy.png"
               alt="Portrait of a male student"
               width="44"
               height="44"
-              loading="lazy"
             />
             <img
-              src="./img/girl.png"
+              src="./images/girl.png"
               alt="Portrait of another female student"
               width="44"
               height="44"
-              loading="lazy"
             />
           </div>
           <a href="#reviews" class="students-link"
@@ -43,13 +40,9 @@
 
         <div class="reviews">
           <div class="star">
-            <img
-              src="./img/star.svg"
-              alt=""
-              aria-hidden="true"
-              width="20"
-              height="20"
-            />
+            <svg width="20" height="20" aria-hidden="true" style="color: var(--white); fill: currentColor;">
+              <use href="./images/sprite.svg#icon-star"></use>
+            </svg>
           </div>
           <div class="review-text">
             <p>Reviews</p>
@@ -64,18 +57,18 @@
       <picture>
         <source
           media="(min-width: 1280px)"
-          srcset="./img/Rectangle.png 1x"
+          srcset="./images/Rectangle.png 1x"
         />
         <source
           media="(min-width: 768px)"
-          srcset="./img/Rectangle.png 1x"
+          srcset="./images/Rectangle.png 1x"
         />
         <img
-          src="./img/Rectangle.png"
+          src="./images/Rectangle.png"
           alt="Photographer holding a camera"
           width="259"
           height="314"
-          loading="lazy"
+          loading="eager"
         />
       </picture>
     </div>

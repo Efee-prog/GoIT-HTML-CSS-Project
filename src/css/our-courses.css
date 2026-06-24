@@ -47,7 +47,6 @@
 
 .our-courses-item {
   width: 100%;
-  max-width: 335px;
   height: 398px;
 
   display: flex;
@@ -58,7 +57,8 @@
   border: 1px solid var(--border-color);
   border-radius: 12px;
 
-  background: var(--black-gradient);
+  /* Exact Figma gradient: #060707 → #1c1c1c top-to-bottom */
+  background: linear-gradient(180deg, #060707 0%, #1c1c1c 100%);
 }
 
 .our-courses-item-top {

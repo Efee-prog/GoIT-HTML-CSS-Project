@@ -1,11 +1,17 @@
+/* ============================================================
+   REVIEWS SECTION — Figma 1280px exact metrics
+   Section: y=3011 h=320
+   Title: h=54, gap to cards=50px
+   Cards: y=3115 h=216 w=530 each (two cards side by side, gap=20px)
+   Section gap below reviews to footer: 150px (handled by section margin/padding)
+   ============================================================ */
+
 .reviews {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .reviews-title {
-  margin-bottom: 40px;
-  font-family: var(--main-font);
-  /* Figma mobile: 28px/32px ls=-1.12 → -0.04em */
+  margin-bottom: 50px;
   font-size: 28px;
   line-height: 32px;
   font-weight: 500;
@@ -22,31 +28,33 @@
   list-style: none;
 }
 
+/* Mobile: only show first card */
 .reviews-item {
+  display: none;
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.03);
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* On mobile only the first card is visible */
-.reviews-item:nth-child(2) {
-  display: none;
+.reviews-item:first-child {
+  display: flex;
 }
 
 .reviews-card-top {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 20px;
+  align-items: center;
+  gap: 0;
 }
 
 .reviews-person {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 4px;
 }
 
 .reviews-person-img {
@@ -59,9 +67,7 @@
 }
 
 .reviews-person-name {
-  margin-bottom: 4px;
-  font-family: var(--main-font);
-  /* Figma: 20px/24px weight 500 */
+  margin: 0 0 4px 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -70,39 +76,35 @@
 
 .reviews-role {
   margin: 0;
-  font-family: var(--main-font);
-  /* Figma: 12px/16px ls=-0.24 */
   font-size: 12px;
   line-height: 16px;
   letter-spacing: -0.02em;
   color: var(--text-muted);
 }
 
-/* Figma star: 16px white circle, brown vector fill inside */
 .reviews-stars {
   display: flex;
   align-items: center;
   gap: 4px;
   flex-shrink: 0;
-  margin-left: 68px;
 }
 
 .reviews-star-icon {
   display: block;
   width: 16px;
   height: 16px;
+  color: var(--accent-color);
 }
 
 .reviews-text {
   margin: 0;
-  font-family: var(--main-font);
-  /* Figma mobile: 14px/18px ls=-0.28 */
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.02em;
   color: var(--primary-text-color);
 }
 
+/* ====== TABLET (768px) ====== */
 @media screen and (min-width: 768px) {
   .reviews {
     padding: 50px 0;
@@ -110,7 +112,6 @@
 
   .reviews-title {
     margin-bottom: 50px;
-    /* Figma tablet: 48px/54px ls=-1.92 → -0.04em */
     font-size: 48px;
     line-height: 54px;
     letter-spacing: -0.04em;
@@ -118,59 +119,55 @@
 
   .reviews-list {
     flex-direction: row;
-    justify-content: center;
+    align-items: stretch;
   }
 
   .reviews-item {
+    display: flex;
     flex: 1 1 calc((100% - 20px) / 2);
-    max-width: 640px;
-  }
-
-  .reviews-item:nth-child(2) {
-    display: list-item;
+    max-width: calc((100% - 20px) / 2);
   }
 
   .reviews-card-top {
     flex-direction: row;
-    gap: 16px;
     justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .reviews-person {
-    margin-bottom: 0;
-  }
-
-  .reviews-stars {
-    margin-left: 0;
+    align-items: center;
+    gap: 0;
   }
 
   .reviews-text {
-    /* Figma tablet: 16px/20px ls=-0.32 → -0.02em */
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.02em;
   }
 }
 
+/* ====== DESKTOP (1280px) ====== */
+/* Figma: section h=320, padding-top≈50px padding-bottom≈54px
+   Reviews y=3011, bottom=3331. Footer y=3481. Gap=150px between sections. */
 @media screen and (min-width: 1280px) {
   .reviews {
-    padding: 75px 0;
+    padding: 50px 0 54px;
   }
 
   .reviews-title {
-    /* Figma desktop: 48px/54px ls=-1.92 → -0.04em */
+    margin-bottom: 50px;
     font-size: 48px;
     line-height: 54px;
     letter-spacing: -0.04em;
   }
 
+  .reviews-list {
+    flex-direction: row;
+    gap: 20px;
+  }
+
   .reviews-item {
     flex: 1 1 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
   }
 
   .reviews-text {
-    /* Figma desktop: 16px/20px ls=-0.32 → -0.02em */
     font-size: 16px;
     line-height: 20px;
     letter-spacing: -0.02em;
