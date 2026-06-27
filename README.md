@@ -2,6 +2,13 @@
 
 Frontend team project developed during the GoIT course.
 
+## Live Demo
+
+You can view the live version of the project here:
+
+Live Site: [https://efee-prog.github.io/GoIT-HTML-CSS-Project/]
+
+
 ## About the Project
 
 FocusFrame 2.0 is a responsive website project created as part of a collaborative frontend development experience. The project focuses on building a modern and fully responsive user interface while following professional Git and GitHub workflows.
